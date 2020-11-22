@@ -57,9 +57,10 @@ public class CompanyAreas {
     @NotNull
     private Date deleted_date;
 
-    @OneToMany(mappedBy = "company_areas", cascade = CascadeType.ALL)
+    /*
+    @OneToMany(mappedBy = "company_areas", cascade = CascadeType.ALL) // 1 companu area può avere più office
     private List<Office> office;
 
-    @OneToMany(mappedBy = "company_areas", cascade = CascadeType.ALL) // 1 company areas può avere più employee
-    private List<Employee> employee;
+    @OneToMany(cascade = CascadeType.ALL) // 1 company areas può avere più employee
+    private List<Employee> employee; */
 }

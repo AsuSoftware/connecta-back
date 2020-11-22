@@ -1,4 +1,4 @@
-package com.antonio.connectabackend.exceptions;
+package com.antonio.connectabackend.exceptions.employee;
 
 public class EmployeeException extends RuntimeException {
     public EmployeeException(String message) {

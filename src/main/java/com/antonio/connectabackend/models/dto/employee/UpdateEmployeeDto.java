@@ -1,4 +1,4 @@
-package com.antonio.connectabackend.models.dto;
+package com.antonio.connectabackend.models.dto.employee;
 
 import com.antonio.connectabackend.models.BusinessRoles;
 import lombok.Getter;
@@ -23,5 +23,5 @@ public class UpdateEmployeeDto {
     @NotNull private String note;
     @NotNull private String insert_by;
     @NotNull private String modify_by;
-    @NotNull private List<BusinessRoles> businessRoles;
+    @NotNull private BusinessRoles businessRoles;
 }

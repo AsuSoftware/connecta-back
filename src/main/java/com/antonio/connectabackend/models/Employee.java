@@ -75,14 +75,18 @@ public class Employee {
     @NotNull
     private LocalDateTime deleted_date;
 
-    @ManyToOne // molti annunci su uno user
+   /* @ManyToOne // molti annunci su uno user
     @JoinColumn(name = "company_areas_id")
-    private CompanyAreas company_areas;
-
-    @ManyToOne // molti annunci su uno user
-    @JoinColumn(name = "office_id")
+    private CompanyAreas company_areas; */
+/*
+    @OneToOne(cascade = CascadeType.ALL) // molti annunci su uno user
+    @JoinColumn(name = "office_id", referencedColumnName = "id")
     private Office office;
-
+/*
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL) // 1 employee può avere più business roles
-    private List<BusinessRoles> businessRoles;
+    private List<BusinessRoles> businessRoles; */
+/*
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "business_roles_id", referencedColumnName = "id") // rappresenta il nome della colonna che fa riferimento ad business roles id
+    private BusinessRoles businessRoles; */
 }

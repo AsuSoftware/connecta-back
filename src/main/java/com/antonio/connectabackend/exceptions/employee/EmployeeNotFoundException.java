@@ -1,4 +1,4 @@
-package com.antonio.connectabackend.exceptions;
+package com.antonio.connectabackend.exceptions.employee;
 
 public class EmployeeNotFoundException extends EmployeeException {
     public EmployeeNotFoundException() {

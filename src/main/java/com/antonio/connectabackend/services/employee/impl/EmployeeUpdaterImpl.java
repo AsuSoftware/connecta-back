@@ -1,8 +1,8 @@
 package com.antonio.connectabackend.services.employee.impl;
 
-import com.antonio.connectabackend.exceptions.EmployeeNotFoundException;
+import com.antonio.connectabackend.exceptions.employee.EmployeeNotFoundException;
 import com.antonio.connectabackend.models.Employee;
-import com.antonio.connectabackend.models.dto.UpdateEmployeeDto;
+import com.antonio.connectabackend.models.dto.employee.UpdateEmployeeDto;
 import com.antonio.connectabackend.repositories.EmployeeRepository;
 import com.antonio.connectabackend.services.employee.EmployeeUpdater;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +31,7 @@ public class EmployeeUpdaterImpl implements EmployeeUpdater {
         employee.setModify_by(updateEmployeeDto.getModify_by());
         employee.setInsert_date(LocalDateTime.now(ZoneOffset.UTC));
         employee.setModify_date(LocalDateTime.now(ZoneOffset.UTC));
-        employee.setBusinessRoles(updateEmployeeDto.getBusinessRoles());
+        // employee.setBusinessRoles(updateEmployeeDto.getBusinessRoles());
         employeeRepository.save(employee);
     }
 }

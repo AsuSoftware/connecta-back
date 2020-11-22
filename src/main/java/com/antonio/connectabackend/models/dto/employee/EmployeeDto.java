@@ -1,13 +1,12 @@
-package com.antonio.connectabackend.models.dto;
+package com.antonio.connectabackend.models.dto.employee;
 
-import com.antonio.connectabackend.models.BusinessRoles;
 import com.antonio.connectabackend.models.Employee;
+import com.antonio.connectabackend.models.Office;
+import com.antonio.connectabackend.models.dto.businessRoles.BusinessRolesDto;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -27,7 +26,8 @@ public class EmployeeDto {
     private LocalDateTime modify_date;
     private String deleted_by;
     private LocalDateTime deleted_date;
-    private List<BusinessRoles> businessRoles;
+    private Office office;
+    private BusinessRolesDto businessRoles;
 
     public static EmployeeDto mapFromEntity(Employee employee) {
         EmployeeDto employeeDto = new EmployeeDto();
@@ -45,7 +45,8 @@ public class EmployeeDto {
         employeeDto.setModify_date(employee.getModify_date());
         employeeDto.setDeleted_by(employee.getDeleted_by());
         employeeDto.setDeleted_date(employee.getDeleted_date());
-        employeeDto.setBusinessRoles(employee.getBusinessRoles());
+       // employeeDto.setOffice(employee.getOffice());
+       // employeeDto.setBusinessRoles(BusinessRolesDto.mapFromEntity(employee.getBusinessRoles()));
         return employeeDto;
     }
 }

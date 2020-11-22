@@ -1,6 +1,6 @@
 package com.antonio.connectabackend.services.employee;
 
-import com.antonio.connectabackend.models.dto.UpdateEmployeeDto;
+import com.antonio.connectabackend.models.dto.employee.UpdateEmployeeDto;
 
 import java.util.UUID;
 

@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -68,7 +69,7 @@ public class Office {
 
     @Column(name = "insert_date")
     @NotNull
-    private Date insert_date;
+    private LocalDateTime insert_date;
 
     @Column(name = "modify_by")
     @NotNull
@@ -76,7 +77,7 @@ public class Office {
 
     @Column(name = "modify_date")
     @NotNull
-    private Date modify_date;
+    private LocalDateTime modify_date;
 
     @Column(name = "deleted_by")
     @NotNull
@@ -84,17 +85,22 @@ public class Office {
 
     @Column(name = "deleted_date")
     @NotNull
-    private Date deleted_date;
+    private LocalDateTime deleted_date;
 
-    @OneToMany(mappedBy = "office", cascade = CascadeType.ALL) // 1 office può avere più company areas
-    private List<Employee> employees;
+    /*
+    @OneToOne(cascade = CascadeType.ALL) // 1 office può avere più employee
+    private Employee employees; */
 
-    @ManyToOne // molti annunci su uno user
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+    @OneToOne(cascade = CascadeType.ALL) // un office ha un business role
+    @JoinColumn(name = "business_roles_id")
+    private BusinessRoles businessRoles;
 
-    @ManyToOne // molti annunci su uno user
+   /* @OneToMany // 1 office può avere più employee
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
+    private List<Employee> employee; */
+
+  /*  @ManyToOne
     @JoinColumn(name = "company_areas_id")
-    private CompanyAreas company_areas;
+    private CompanyAreas company_areas; */
 
 }

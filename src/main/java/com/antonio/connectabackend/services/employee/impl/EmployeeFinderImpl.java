@@ -1,6 +1,6 @@
 package com.antonio.connectabackend.services.employee.impl;
 
-import com.antonio.connectabackend.exceptions.EmployeeNotFoundException;
+import com.antonio.connectabackend.exceptions.employee.EmployeeNotFoundException;
 import com.antonio.connectabackend.models.Employee;
 import com.antonio.connectabackend.repositories.EmployeeRepository;
 import com.antonio.connectabackend.services.employee.EmployeeFinder;

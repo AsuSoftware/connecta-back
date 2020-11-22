@@ -1,9 +1,8 @@
 package com.antonio.connectabackend.services.employee.impl;
 
-import com.antonio.connectabackend.models.Employee;
-import com.antonio.connectabackend.models.dto.CreateEmployeeDto;
-import com.antonio.connectabackend.models.dto.EmployeeDto;
-import com.antonio.connectabackend.models.dto.UpdateEmployeeDto;
+import com.antonio.connectabackend.models.dto.employee.CreateEmployeeDto;
+import com.antonio.connectabackend.models.dto.employee.EmployeeDto;
+import com.antonio.connectabackend.models.dto.employee.UpdateEmployeeDto;
 import com.antonio.connectabackend.services.employee.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

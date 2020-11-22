@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -28,7 +29,7 @@ public class BusinessRoles {
 
     @Column(name = "insert_date")
     @NotNull
-    private Date insert_date;
+    private LocalDateTime insert_date;
 
     @Column(name = "modify_by")
     @NotNull
@@ -36,7 +37,7 @@ public class BusinessRoles {
 
     @Column(name = "modify_date")
     @NotNull
-    private Date modify_date;
+    private LocalDateTime modify_date;
 
     @Column(name = "deleted_by")
     @NotNull
@@ -44,10 +45,13 @@ public class BusinessRoles {
 
     @Column(name = "deleted_date")
     @NotNull
-    private Date deleted_date;
-
+    private LocalDateTime deleted_date;
+/*
     @ManyToOne // molti annunci su uno user
     @JoinColumn(name = "employee_id")
-    private Employee employee;
+    private Employee employee; */
+/*
+    @OneToOne(mappedBy = "businessRoles")
+    private Employee employee; */
 
 }

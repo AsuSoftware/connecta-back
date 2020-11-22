@@ -1,4 +1,4 @@
-package com.antonio.connectabackend.models.dto;
+package com.antonio.connectabackend.models.dto.businessRoles;
 
 import lombok.Getter;
 import lombok.Setter;
