@@ -9,6 +9,9 @@ import com.antonio.connectabackend.services.office.OfficeCreator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+
 @Service
 @RequiredArgsConstructor
 public class OfficeCreatorImpl implements OfficeCreator {
@@ -38,6 +41,7 @@ public class OfficeCreatorImpl implements OfficeCreator {
         office.setPec(createOfficeDto.getPec());
         office.setEmail(createOfficeDto.getEmail());
         office.setInsert_by(createOfficeDto.getInsert_by());
+        office.setInsert_date(LocalDateTime.now(ZoneOffset.UTC));
        // office.setEmployees(employee);
         return office;
     }

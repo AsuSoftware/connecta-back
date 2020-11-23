@@ -6,12 +6,13 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "company_areas")
 @Getter
 @Setter
 @ToString
@@ -39,7 +40,7 @@ public class CompanyAreas {
 
     @Column(name = "insert_date")
     @NotNull
-    private Date insert_date;
+    private LocalDateTime insert_date;
 
     @Column(name = "modify_by")
     @NotNull
@@ -47,7 +48,7 @@ public class CompanyAreas {
 
     @Column(name = "modify_date")
     @NotNull
-    private Date modify_date;
+    private LocalDateTime modify_date;
 
     @Column(name = "deleted_by")
     @NotNull
@@ -55,7 +56,10 @@ public class CompanyAreas {
 
     @Column(name = "deleted_date")
     @NotNull
-    private Date deleted_date;
+    private LocalDateTime deleted_date;
+
+    @OneToOne
+    private Office office;
 
     /*
     @OneToMany(mappedBy = "company_areas", cascade = CascadeType.ALL) // 1 companu area può avere più office
