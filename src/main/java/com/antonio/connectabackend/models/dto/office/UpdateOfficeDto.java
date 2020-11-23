@@ -1,6 +1,6 @@
 package com.antonio.connectabackend.models.dto.office;
 
-import com.antonio.connectabackend.models.dto.businessRoles.UpdateBusinessRoles;
+import com.antonio.connectabackend.models.dto.businessRoles.UpdateBusinessRolesDto;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,5 +26,5 @@ public class UpdateOfficeDto {
     private LocalDateTime insert_date;
     @NotNull private String modify_by;
     private LocalDateTime modify_date;
-    @NotNull private UpdateBusinessRoles businessRoles;
+    @NotNull private UpdateBusinessRolesDto businessRoles;
 }

@@ -95,6 +95,10 @@ public class Office {
     @JoinColumn(name = "business_roles_id")
     private BusinessRoles businessRoles;
 
+    @OneToOne // one office have one company areas
+    @JoinColumn(name = "company_areas_id")
+    private CompanyAreas companyAreas;
+
    /* @OneToMany // 1 office può avere più employee
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private List<Employee> employee; */

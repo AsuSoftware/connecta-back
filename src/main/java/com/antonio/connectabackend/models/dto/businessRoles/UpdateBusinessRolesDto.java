@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class UpdateBusinessRoles {
+public class UpdateBusinessRolesDto {
 
     private UUID id;
     private String description;

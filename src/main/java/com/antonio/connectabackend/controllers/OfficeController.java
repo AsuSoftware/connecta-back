@@ -26,8 +26,8 @@ public class OfficeController {
     }
 
     @GetMapping
-    @ResponseStatus(HttpStatus.FOUND)
-    public List<OfficeDto> findAllEmployees() {
+    //@ResponseStatus(HttpStatus.FOUND)
+    public List<OfficeDto> findAllOffices() {
         return officeService.findAll();
     }
 
