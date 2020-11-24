@@ -26,7 +26,7 @@ public class BusinessRolesController {
     }
 
     @GetMapping
-    @ResponseStatus(HttpStatus.FOUND)
+    //@ResponseStatus(HttpStatus.FOUND)
     public List<BusinessRolesDto> findAllBusinessRoles() {
         return businessRolesService.findAll();
     }
