@@ -21,7 +21,6 @@ public class OfficeCreatorImpl implements OfficeCreator {
 
     @Override
     public void create(CreateOfficeDto createOfficeDto) {
-     //   Office office = createOffice(createOfficeDto, employee);
         Office office = createOffice(createOfficeDto);
         BusinessRoles businessRoles = businessRolesService.register(createOfficeDto.getBusinessRoles());
         office.setBusinessRoles(businessRoles); // set business role after insert it to db, so it can have the id
